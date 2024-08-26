@@ -26,8 +26,12 @@ function App() {
 
   return (
     <main>
-      <input type="text" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
-      <button onClick={addItem}>추가</button>
+      <form>
+        <div className="inputBox">
+          <input type="text" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+          <button onClick={addItem}>add</button>
+        </div>
+      </form>
       <TodoBoard todoList={todoList}  deleteItem = {deleteItem} />
     </main>
   );
